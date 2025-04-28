@@ -53,13 +53,37 @@ Host (Give it any name)
    journalctl -fu ssh ( New way )
 2. SSH dir should be accessed by solely by user and not root [ if this is the case ssh think its key is compromised and you wont be able to login into ]
    Q)
+3. For changing ports in Ubuntu 22.10 or above you'll have to actually change it through systemd as it is the actual listener, even if you change it in /etc/ssh/sshd_config.d/ , it won't work
+   Instead do this :
+
+```
+sudo mkdir -p /etc/systemd/system/ssh.socket.d
+sudo nano /etc/systemd/system/ssh.socket.d/override.conf
+Paste this in the above file
+[Socket]
+ListenStream=
+ListenStream=2222
+Run these :
+sudo systemctl daemon-reexec
+sudo systemctl daemon-reload
+sudo systemctl restart ssh.socket
+sudo systemctl restart ssh
+
+Allow Ufw for desired PORT
+sudo ufw allow 2222/tcp // Example 2222
+
+```
 
 <!--- Get your networking concepts together-->
 
 1. What are ports ?
+   Ans : <https://www.plesk.com/blog/various/open-ports-in-linux/>
+   It is a virtual point where all network connections start and end
+   <https://www.plesk.com/blog/various/open-ports-in-linux/>
 2. DNS Setup
 3. What is the thingy with this IP ? How is he exposing it ? Is it a local IP ?
 4. Write about man in the middle
 5. Bots for looking into open PORTS like 22 as it is default as [ Changing Ports helps in securing like 1% ]
 6. What is a firewall?
 7. Learn about Systemd & systemclt & journalctl
+8. What is VPN ? & VPS ?
