@@ -74,6 +74,18 @@ sudo ufw allow 2222/tcp // Example 2222
 
 ```
 
+# Setting Static Ip
+
+- Ip is of two types :
+
+1. Dynamic ip-address - Changes often when you are disconnected to the network for a long time etc..
+   Solid Privacy
+2. Static ip-address - Doesn't Change . Better for hosting etc
+
+## How to set Static ip
+
+Refer- <https://www.freecodecamp.org/news/setting-a-static-ip-in-ubuntu-linux-ip-address-tutorial/>
+
 <!--- Get your networking concepts together-->
 
 1. What are ports ?
