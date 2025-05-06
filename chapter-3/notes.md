@@ -76,7 +76,7 @@ sudo ufw allow 2222/tcp // Example 2222
 
 # Setting Static Ip
 
-- Ip is of two types :
+- Ip is of two types : ..
 
 1. Dynamic ip-address - Changes often when you are disconnected to the network for a long time etc..
    Solid Privacy
