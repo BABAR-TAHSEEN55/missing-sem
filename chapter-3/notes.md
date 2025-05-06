@@ -94,8 +94,26 @@ Refer- <https://www.freecodecamp.org/news/setting-a-static-ip-in-ubuntu-linux-ip
    <https://www.plesk.com/blog/various/open-ports-in-linux/>
 2. DNS Setup
 3. What is the thingy with this IP ? How is he exposing it ? Is it a local IP ?
+   As mentioned earlier, IP addresses are classified into two types: private and public.
+
+Private IP addresses are assigned by your router and are used within your local network (e.g., your home or office). These addresses are not routable over the internet and are typically in the following ranges:
+
+10.0.0.0 - 10.255.255.255
+
+172.16.0.0 - 172.31.255.255
+
+192.168.0.0 - 192.168.255.255
+
+Private IPs are valid only within the range of your router’s network, meaning devices inside your home (like phones, laptops, and smart devices) communicate with each other using private IP addresses.
+
+Public IP addresses, on the other hand, are assigned by your Internet Service Provider (ISP) and are routable across the internet. These are used to identify your network to the outside world, allowing devices on the internet to communicate with your network. Public IPs are crucial because they enable internet connectivity, but exposing them can be risky, as they make your network more vulnerable to cyberattacks and unauthorized access.
+
+So when ppl expose their ip while teaching it is their private ip
+
 4. Write about man in the middle
 5. Bots for looking into open PORTS like 22 as it is default as [ Changing Ports helps in securing like 1% ]
 6. What is a firewall?
-7. Learn about Systemd & systemclt & journalctl
-8. What is VPN ? & VPS ?
+   A Firewall is a security system that controls incoming and outgoing network traffic based on predefined rules
+   Main Objective of it is to protect your system from cyber attacks & unauthorized access
+
+7. What is VPN ? & VPS ?
